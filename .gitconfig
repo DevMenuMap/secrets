@@ -1,0 +1,18 @@
+[user]
+	name = Jeongbin Kim
+	email = dev@menumap.co.kr
+[push]
+	default = matching
+[alias]
+	a = add . 
+	c = commit -am
+	b = branch
+	l = log --oneline --decorate --graph
+	s = status
+	co = checkout
+	re = rebase -i
+	rl = reflog
+[color "status"]
+  added = yellow
+	changed = green
+	untracked = cyan
