@@ -12,6 +12,6 @@ if Rails.env.production?
   ENV['RDS_DB_NAME']  = 'new_menumap_production'
 end
 
-if Rails.env.production?
+if Rails.env.test?
   ENV['RDS_DB_NAME']  = 'new_menumap_test'
 end
