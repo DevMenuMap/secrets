@@ -7,7 +7,7 @@
 	a = add . 
 	c = commit -am
 	b = branch
-	l = log --oneline --decorate --graph
+	l = log --oneline --decorate --graph -15
 	s = status
 	co = checkout
 	re = rebase -i
@@ -16,3 +16,5 @@
   added = yellow
 	changed = green
 	untracked = cyan
+[core]
+	pager = cat
