@@ -3,7 +3,6 @@ augroup default_settings
 	autocmd!
 	autocmd BufNewFile,BufRead * set number
 	autocmd BufNewFile,BufRead * set autoindent
-	autocmd BufNewFile,BufRead * set smartindent
 	autocmd BufNewFile,BufRead * set t_Co=256
 	autocmd BufNewFile,BufRead * set ts=2
 	autocmd BufNewFile,BufRead * set sw=2
@@ -19,6 +18,8 @@ augroup file_specific_settings
 	autocmd!
 	" Set nowrap when read new or existing files.
 	autocmd BufNewFile,BufRead .vimrc setlocal nowrap
+	autocmd BufNewFile,BufRead schema.rb setlocal nowrap
+	autocmd BufNewFile,BufRead Gemfile setlocal nowrap
 augroup END
 " }}}
 
@@ -71,7 +72,7 @@ augroup basic_abbreviations
 	autocmd BufNewFile,BufRead * iabbrev smm http://menumap.co.kr
 
 	" Handy Abbreviations
-	autocmd FileType ruby iabbrev <buffer> iff if<CR><BS>end<Up>
+	autocmd FileType ruby iabbrev <buffer> iff if<CR>end<Up>
 	autocmd FileType ruby iabbrev <buffer> deff def<CR>end<Up>
 augroup END
 " }}}
@@ -167,6 +168,12 @@ augroup comment_out
 	" Uncomment multiple lines.
 	autocmd FileType vim,ruby vnoremap <buffer> <localleader>uc <Esc>'<<C-v>'>ld
 	autocmd FileType html,eruby,css,javascript vnoremap <buffer> <localleader>uc <Esc>'<kdd'>jdd
+augroup END
+
+augroup key_for_abbreviations
+	autocmd!
+	autocmd BufNewFile,BufRead * inoremap <leader>r restaurant
+	autocmd BufNewFile,BufRead * inoremap <leader>R Restaurant
 augroup END
 " }}}
 
