@@ -27,6 +27,13 @@ end
 # Devise
 ENV['DEVISE_SECRET_KEY'] = '660fca6110afbe041b243dc2a314d7e66820df093ca44a0b889162475bd3b8d32fa9ad7a211671d3f17bcf582244966a0d47d5a2ed27e186c62646cad28955a3'
 
+# IP
+if Rails.env.development?
+	ENV['CURRENT_IP'] = 'http://52.69.51.63:3000'
+elsif Rails.env.production?
+	ENV['CURRENT_IP'] = 'http://menumap.co.kr'
+end
+
 # Facebook
 ENV['FB_APP_ID'] = '1053593421318380'
 ENV['FB_APP_SECRET'] = '25db942c04bb6e4b69c29cd2982a01d9'
