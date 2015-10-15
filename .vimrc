@@ -86,24 +86,28 @@ augroup parentheses_operator
 	" Inside the next parentheses, curly brackets, gt&lt and quotes.
 	autocmd BufNewFile,BufRead * onoremap in( :<C-u>normal! f(vi(<CR>
 	autocmd BufNewFile,BufRead * onoremap in{ :<C-u>normal! f{vi{<CR>
+	autocmd BufNewFile,BufRead * onoremap in[ :<C-u>normal! f[vi[<CR>
 	autocmd BufNewFile,BufRead * onoremap in< :<C-u>normal! f<vi<<CR>
 	autocmd BufNewFile,BufRead * onoremap in" :<C-u>normal! f"vi"<CR>
 	autocmd BufNewFile,BufRead * onoremap in' :<C-u>normal! f'vi'<CR>
 	" Inside the previous(last) parentheses, curly brackets, gt&lt and quotes.
-	autocmd BufNewFile,BufRead * onoremap il( :<C-u>normal! F)vi(<CR>
+	autocmd BufNewFile,BufRead * onoremap il( :<C-u>normal! F(vi(<CR>
 	autocmd BufNewFile,BufRead * onoremap il{ :<C-u>normal! F{vi{<CR>
+	autocmd BufNewFile,BufRead * onoremap il[ :<C-u>normal! F[vi[<CR>
 	autocmd BufNewFile,BufRead * onoremap il< :<C-u>normal! F<vi<<CR>
 	autocmd BufNewFile,BufRead * onoremap il" :<C-u>normal! F"vi"<CR>
 	autocmd BufNewFile,BufRead * onoremap il' :<C-u>normal! F'vi'<CR>
 	" Around the next parentheses, curly brackets, gt&lt and quotes.
 	autocmd BufNewFile,BufRead * onoremap an( :<C-u>normal! f(va(<CR>
 	autocmd BufNewFile,BufRead * onoremap an{ :<C-u>normal! f{va{<CR>
+	autocmd BufNewFile,BufRead * onoremap an[ :<C-u>normal! f[va[<CR>
 	autocmd BufNewFile,BufRead * onoremap an< :<C-u>normal! f<va<<CR>
 	autocmd BufNewFile,BufRead * onoremap an" :<C-u>normal! f"va"<CR>
 	autocmd BufNewFile,BufRead * onoremap an' :<C-u>normal! f'va'<CR>
 	" Around the previous(last) parentheses, curly brackets, gt&lt and quotes.
-	autocmd BufNewFile,BufRead * onoremap al( :<C-u>normal! F)va(<CR>
+	autocmd BufNewFile,BufRead * onoremap al( :<C-u>normal! F(va(<CR>
 	autocmd BufNewFile,BufRead * onoremap al{ :<C-u>normal! F{va{<CR>
+	autocmd BufNewFile,BufRead * onoremap al[ :<C-u>normal! F[va[<CR>
 	autocmd BufNewFile,BufRead * onoremap al< :<C-u>normal! F<va<<CR>
 	autocmd BufNewFile,BufRead * onoremap al" :<C-u>normal! F"va"<CR>
 	autocmd BufNewFile,BufRead * onoremap al' :<C-u>normal! F'va'<CR>
